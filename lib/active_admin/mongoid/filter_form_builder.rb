@@ -18,7 +18,7 @@ class ActiveAdmin::FilterFormBuilder
   end
 
   def is_association?(method)
-    @object.klass.associations.to_a.map(&:first).include?(method.to_s)
+    false#@object.klass.associations.to_a.map(&:first).include?(method.to_s)
   end
 
   def column_for(method)
